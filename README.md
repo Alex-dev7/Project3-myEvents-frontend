@@ -8,6 +8,8 @@
   * react-router-dom
   * sass
 
+
+
 ## Component Architecture
 
 ```mermaid
@@ -55,3 +57,5 @@ flowchart TD
 ![Mobile Mockup](https://i.imgur.com/hxYm9PP.png)  ![](https://i.imgur.com/TZpnHYB.png)
 
 * [Deployed Website](https://myevents-s.netlify.app/) 
+
+* [Trello Board](https://trello.com/invite/b/SM62JvSN/ATTI6ce761845601bbe93681bf856390c7e7C2EC9F33/my-events) 
