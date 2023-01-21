@@ -54,4 +54,4 @@ flowchart TD
 
 ![Mobile Mockup](https://i.imgur.com/hxYm9PP.png)  ![](https://i.imgur.com/TZpnHYB.png)
 
-* [Deployed Website](https://myevents-frontend.netlify.app/) 
+* [Deployed Website](https://myevents-s.netlify.app/) 
