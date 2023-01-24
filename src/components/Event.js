@@ -1,4 +1,4 @@
-
+import Timer from "./Timer"
 import { Link } from "react-router-dom"
 
 
@@ -15,6 +15,7 @@ export function Event({event}){
       <li>{event.dateTime}</li>
       <li>{event.description}</li>
     </ul>
+    <h3><Timer date={event.dateTime}/></h3>
   </div>
   )
 }
