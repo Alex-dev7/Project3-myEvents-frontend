@@ -1,8 +1,9 @@
 
 import { Link } from "react-router-dom"
 
-export function Event({event}){
 
+export function Event({event}){
+  console.log(event)
   return(
     <div key={event._id}>
     <ul>
