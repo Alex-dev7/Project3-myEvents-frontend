@@ -1,6 +1,18 @@
+import { Link } from 'react-router-dom'
+
 function Header(props) {
 
-    return <h1>Header Component</h1>
+    return (
+        <header >
+            <div className='nav-bar'>
+                <Link to='/about'>
+                    About
+                </Link>
+            </div>
+           <Link id='title' to='/view'>MyEvents</Link>
+
+        </header>
+    )
 }
 
 export default Header
