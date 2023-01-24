@@ -10,14 +10,12 @@ import { ViewEvents } from './pages/ViewEvents'
 const router = createBrowserRouter(
     createRoutesFromElements(
         <Route path="/" element={<App/>} >
-            <Route path="">
-                <Route path="view" loader={eventsLoader}
-                element={<ViewEvents/>}/>
+                <Route path="" loader={eventsLoader}element={<ViewEvents/>}/>
                 <Route path=":id" />
                 <Route path="create" />
                 <Route path="update/:id" />
                 <Route path="delete/:id" />
-            </Route>
+            
         </Route>
     )
 )
