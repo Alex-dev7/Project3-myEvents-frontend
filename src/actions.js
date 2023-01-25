@@ -52,9 +52,9 @@ export const updateAction = async({ request, params }) =>{
   }
 
   function compensateDST(dt) {
-    var janOffset = new Date(dt.getFullYear(), 0, 1).getTimezoneOffset();
-    var julOffset = new Date(dt.getFullYear(), 6, 1).getTimezoneOffset();
-    var dstMinutes = dt.getTimezoneOffset() - Math.max(janOffset, julOffset);
+    const janOffset = new Date(dt.getFullYear(), 0, 1).getTimezoneOffset();
+    const julOffset = new Date(dt.getFullYear(), 6, 1).getTimezoneOffset();
+    const dstMinutes = dt.getTimezoneOffset() - Math.max(janOffset, julOffset);
     dt = new Date(dt);
     dt.setMinutes(dt.getMinutes() - dstMinutes);
     return dt;
