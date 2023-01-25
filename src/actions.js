@@ -59,3 +59,11 @@ export const updateAction = async({ request, params }) =>{
     dt.setMinutes(dt.getMinutes() - dstMinutes);
     return dt;
 }
+
+export const deleteAction = async ({params}) => {
+    await fetch(URL + "/myevents/" + params.id, {
+      method: "delete"
+    })
+
+    return redirect("/")
+}
