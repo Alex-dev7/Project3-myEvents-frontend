@@ -31,13 +31,13 @@ export function CreateEvent(props){
         <Form onSubmit={handleSubmit} action="/create" method="POST">
             <legend><h1>Add a New Event</h1></legend>
 
-            <input type="input" name="title" placeholder="event title" value={formData.title} onChange={handleChange}/>
+            <input type="input" name="title" placeholder="event title" value={formData.title} onChange={handleChange} required/>
 
-            <input type="input" name="url" placeholder="event url" value={formData.url} onChange={handleChange}/>
+            <input type="input" name="url" placeholder="event url (optional)" value={formData.url} onChange={handleChange}/>
 
-            <input type="datetime-local" name="dateTime" value={formData.dateTime} onChange={handleChange}/>
+            <input type="datetime-local" name="dateTime" value={formData.dateTime} onChange={handleChange} required/>
 
-            <textarea name="description" rows="5" placeholder="event description" value={formData.description} onChange={handleChange}/>
+            <textarea name="description" rows="5" placeholder="event description" value={formData.description} onChange={handleChange} required/>
 
             <input type="submit" value="Add New Event"/>
 

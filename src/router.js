@@ -22,7 +22,7 @@ const router = createBrowserRouter(
                 <Route path=":id" />
                 <Route 
                     path="create"
-                    // action={createAction}
+                    action={createAction}
                     element={<CreateEvent/>} />
                 <Route path="update/:id" />
                 <Route path="delete/:id" />
