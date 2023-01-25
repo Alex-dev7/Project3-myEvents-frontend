@@ -4,6 +4,7 @@ import {
     Route
 } from "react-router-dom";
 import App from "./App"
+import { createAction } from "./actions";
 import { eventsLoader } from "./loaders"
 import { ViewEvents } from './pages/ViewEvents'
 import { CreateEvent } from './pages/CreateEvent'
@@ -21,7 +22,7 @@ const router = createBrowserRouter(
                 <Route path=":id" />
                 <Route 
                     path="create"
-                    // action={}
+                    // action={createAction}
                     element={<CreateEvent/>} />
                 <Route path="update/:id" />
                 <Route path="delete/:id" />
