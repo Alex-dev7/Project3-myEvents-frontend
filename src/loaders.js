@@ -26,7 +26,5 @@ export const eventLoader = async ({params}) => {
 }
 
 function convertFromUTC(utcDateTime){
-    //YYYY-MM-DDThh:mm
     return new Date(new Date(utcDateTime) - new Date().getTimezoneOffset() * 60000).toISOString().replace('Z', '');
-    //return new Date(utcDateTime).toLocaleString() ;
 }

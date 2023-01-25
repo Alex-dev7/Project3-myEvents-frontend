@@ -5,20 +5,6 @@ import { Form, useLoaderData } from "react-router-dom"
 
 
 export function Update(props) {
-  const initialForm = {
-    title: "",
-    url: "",
-    dateTime: "",
-    description: "",
-    username: ""
-  }
-  
-  const [formData, setFormData] = useState(initialForm)
-  
-  const handleChange = (event) => {
-    // update form data with change in the form
-    setFormData({...formData, [event.target.name]: event.target.value})
-  }
 
  console.log(useLoaderData())
   const event = useLoaderData()
