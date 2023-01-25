@@ -5,7 +5,7 @@ import { Link } from "react-router-dom"
 export function Event({event}){
   console.log(event)
   return(
-    <div key={event._id}>
+    <div className='item' key={event._id}>
     <ul>
       <li><Link to={`${event._id} `} >
       {event.title}
