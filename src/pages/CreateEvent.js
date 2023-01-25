@@ -21,8 +21,7 @@ export function CreateEvent(props){
 
     // function to handle submit (mainly to clear out form inputs)
     const handleSubmit = (event) => {
-        // prevent refresh
-        event.preventDefault()
+        // DO NOT PREVENT REFRESH otherwise it will override the redirect in createAction and stay on same page
         // clear form by resetting
         setFormData(initialForm)
     }

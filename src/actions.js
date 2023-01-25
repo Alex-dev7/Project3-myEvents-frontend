@@ -2,7 +2,7 @@ import { redirect } from "react-router-dom"
 
 const URL = "https://myevents-backend-dev.onrender.com"
 
-export const createAction = async ({request}) => {
+export const createAction = async ({ request }) => {
     const formData = await request.formData()
     
     const newEvent = {
