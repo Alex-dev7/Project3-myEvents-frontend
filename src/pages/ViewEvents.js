@@ -2,7 +2,7 @@ import { useLoaderData } from 'react-router-dom'
 import { Event } from '../components/Event';
 
 
-export function ViewEvents(props){
+export default function ViewEvents(props){
   const events = useLoaderData()
 
   return (
