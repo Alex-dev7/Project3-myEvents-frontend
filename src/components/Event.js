@@ -3,7 +3,9 @@ import { Link } from "react-router-dom"
 
 
 export function Event({event}){
-  console.log(event)
+  // console.log(event)
+ const date = new Date(event.dateTime).toLocaleString()
+ 
   return(
     <div className='item' key={event._id}>
     <ul>
@@ -11,7 +13,7 @@ export function Event({event}){
       {event.title}
       </Link>
       </li>
-      <li>{event.dateTime}</li>
+      <li id='fade'>{date}</li>
     </ul>
     <h3><Timer date={event.dateTime}/></h3>
   </div>
