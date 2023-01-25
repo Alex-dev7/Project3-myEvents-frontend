@@ -9,7 +9,7 @@ function Header(props) {
                     About
                 </Link>
             </div>
-           <Link id='title' to='/view'>MyEvents</Link>
+           <Link id='title' to='/'>MyEvents</Link>
 
         </header>
     )
