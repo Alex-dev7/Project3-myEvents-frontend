@@ -11,9 +11,7 @@ export function Event({event}){
       {event.title}
       </Link>
       </li>
-      <li><a href={event.url} target="_blank" rel="noreferrer">{event.url}</a></li>
       <li>{event.dateTime}</li>
-      <li>{event.description}</li>
     </ul>
     <h3><Timer date={event.dateTime}/></h3>
   </div>
