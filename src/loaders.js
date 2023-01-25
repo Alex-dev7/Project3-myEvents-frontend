@@ -9,3 +9,10 @@ export const eventsLoader = async () => {
     const events = response.json()
     return events
 }
+
+// loader for the show route
+export const eventLoader = async ({params}) => {
+    const response = await fetch(URL + "/myevents/" + params.id)
+    const event = await response.json()
+    return event
+}
