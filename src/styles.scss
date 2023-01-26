@@ -36,7 +36,6 @@ body, html {
 
     #title {
         width: 100%;
-        text-align: center;
         font-size: 4rem;
         font-weight: 600;
         text-decoration: none;
@@ -81,7 +80,7 @@ textarea {
 
 footer {
     width: 100vw;
-    min-height: 70px;
+    min-height: 100px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     justify-content: center;
@@ -104,9 +103,31 @@ footer {
             text-decoration: underline;
             color: inherit;
         }
+
+    }
+    .by-section {
+        display: flex;
+        justify-content: space-evenly;
+        .name-links {
+            margin: .5rem 1rem;
+               display: flex;
+               flex-direction: column;
+    
+            a {
+                text-decoration: none;
+                color: $primary-color;
+            }
+            a:hover{
+                color: white;;
+            }
+        }
     }
 
+
 }
+
+
+
 
 // home page styles ----------------------------------------------------------------
 
@@ -199,3 +220,14 @@ footer {
     background: #555;
   }
 
+  @media (max-width: 810px) {
+    .items-container {
+        width: 100vw;
+    }
+    .header #title {
+        text-align: center;
+        min-width: 100%;
+        margin-left: 20%;
+        color:#147664;
+    }
+  }
