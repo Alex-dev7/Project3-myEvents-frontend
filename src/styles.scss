@@ -4,6 +4,8 @@
   $primary-color: #EEE7CE;
   $sec-color: #064439;
 
+
+
 * {
     margin: 0;
     padding: 0;
@@ -15,7 +17,9 @@
     position: relative;
 }
 body {
-    background-color: $primary-color;
+    // this is the built in Bootstrap variable to adjust the body's bg color
+    // doesn't work with SASS variables for some reason, so I used hex code
+    --bs-body-bg: #EEE7CE;
     // background-color: #FFF0EB;
 }
 
@@ -27,10 +31,10 @@ header {
     min-height: 18vh;
     width: 100vw;
     // color: #FFFCF6;
-    color: #EEE7CE;
+    color: $primary-color;
 
 
-    #title {
+    .navbar-brand {
         width: 100%;
         text-align: center;
         font-size: 4rem;
@@ -38,29 +42,32 @@ header {
         text-decoration: none;
         color: inherit;
         margin-left: 1rem;
-    }
-    #title:hover {
-        text-shadow: #57989afc 2px 2px 3px;
+        color: $primary-color;
+
+        &:hover{
+            color: $primary-color;
+            text-shadow: #57989afc 2px 2px 3px;
+        }
     }
 
-    .nav-bar {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        background-color: #27454688;
-        border-bottom: .1px solid black;
-        a {
-            width: auto;
-            font-size: 1.4rem;
-            padding: 10px;
-            text-decoration: none;
-            color: inherit;
-        }
-        a:hover{
-            background-color: #3f71736f;
-        }
+    // .nav-bar {
+    //     display: flex;
+    //     justify-content: center;
+    //     width: 100%;
+    //     background-color: #27454688;
+    //     border-bottom: .1px solid black;
+    //     a {
+    //         width: auto;
+    //         font-size: 1.4rem;
+    //         padding: 10px;
+    //         text-decoration: none;
+    //         color: inherit;
+    //     }
+    //     a:hover{
+    //         background-color: #3f71736f;
+    //     }
 
-    }
+    // }
 
 }
 
