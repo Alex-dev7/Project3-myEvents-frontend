@@ -8,8 +8,11 @@ function Header(props) {
                 <Link to='/about'>
                     About
                 </Link>
+                <Link to='/create'>
+                    Add New Event
+                </Link>
             </div>
-           <Link id='title' to='/view'>MyEvents</Link>
+           <Link id='title' to='/'>MyEvents</Link>
 
         </header>
     )
