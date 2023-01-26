@@ -2,6 +2,7 @@
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;600&display=swap');
 
   $primary-color: #EEE7CE;
+  $primary-hover-color: #bbbbbb;
   $sec-color: #064439;
 
 
@@ -25,6 +26,7 @@ body {
 
 
 // header styles ------------------------------------------------
+
 header {
     // background-color: #006868;
     background-color: $sec-color;
@@ -36,12 +38,12 @@ header {
 
     .navbar-brand {
         width: 100%;
-        text-align: center;
+        // text-align: center;
         font-size: 4rem;
         font-weight: 600;
         text-decoration: none;
         color: inherit;
-        margin-left: 1rem;
+        // margin-left: 1rem;
         color: $primary-color;
 
         &:hover{
@@ -50,24 +52,15 @@ header {
         }
     }
 
-    // .nav-bar {
-    //     display: flex;
-    //     justify-content: center;
-    //     width: 100%;
-    //     background-color: #27454688;
-    //     border-bottom: .1px solid black;
-    //     a {
-    //         width: auto;
-    //         font-size: 1.4rem;
-    //         padding: 10px;
-    //         text-decoration: none;
-    //         color: inherit;
-    //     }
-    //     a:hover{
-    //         background-color: #3f71736f;
-    //     }
-
-    // }
+    .navbar {
+       .nav-link {
+            color: $primary-color;
+            
+            &:hover {
+                color: $primary-hover-color;
+            }
+        }
+    }
 
 }
 
