@@ -9,7 +9,11 @@ export const eventsLoader = async () => {
 
     for(let ev of events)
     {
-        // ev.dateTime = convertFromUTC(ev.dateTime);
+        ev.dateTime = convertFromUTC(ev.dateTime);
+        if(ev?.dateTime)
+        {
+            ev.dateTime = convertFromUTC(ev.dateTime);
+        }
     }
 
     return events
@@ -20,11 +24,14 @@ export const eventLoader = async ({params}) => {
     const response = await fetch(URL + "/myevents/" + params.id)
     
     const event = await response.json()
-    // event.dateTime = convertFromUTC(event.dateTime);
-
+    event.dateTime = convertFromUTC(event.dateTime);
+    if(event?.dateTime)
+    {
+        event.dateTime = convertFromUTC(event.dateTime);
+    }
     return event
 }
 
-// function convertFromUTC(utcDateTime){
-//     return new Date(new Date(utcDateTime) - new Date().getTimezoneOffset() * 60000).toISOString().replace('Z', '');
-// }
+function convertFromUTC(utcDateTime){
+    return new Date(new Date(utcDateTime) - new Date().getTimezoneOffset() * 60000).toISOString().replace('Z', '');
+}

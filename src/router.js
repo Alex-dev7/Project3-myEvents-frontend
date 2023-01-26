@@ -3,6 +3,7 @@ import {
     createRoutesFromElements,
     Route
 } from "react-router-dom";
+import React from "react";
 import App from "./App"
 import { createAction, updateAction, deleteAction } from "./actions";
 import { eventsLoader, eventLoader } from "./loaders"
@@ -12,15 +13,21 @@ import { CreateEvent } from './pages/CreateEvent'
 import About from "./pages/About";
 import Show from "./pages/Show";
 import Signup from "./pages/Signup";
+import Login from "./pages/Login";
+import index from "./pages/index"
+import { GlobalCtx } from "./App";
 
 
 const router = createBrowserRouter(
+    
     createRoutesFromElements(
         <Route path="/" element={<App/>}>
                 <Route
                     path="" 
                     loader={eventsLoader}
-                    element={<ViewEvents/>} />
+                    element={<ViewEvents/>}
+                    // render= {(rp) => gState.token ? <h1 Signup /> : <h1 Dash />} 
+                    />
                 <Route path="about" element={<About/>} />
                 <Route 
                     path=":id"
@@ -37,7 +44,7 @@ const router = createBrowserRouter(
                     action={updateAction}/>
                 <Route path="delete/:id" action={deleteAction} />
                 <Route path="/signup" element={<Signup/>}/>
-                <Route path="/login" />
+                <Route path="/login" element={<Login/>} />
         </Route>
     )
 )
