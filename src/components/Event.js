@@ -16,9 +16,9 @@ export function Event({event}){
     </ul>
     <h3><Timer date={event.dateTime}/></h3>
     </div>
-    <Link to={`update/${event._id} `} >
-              <button>Edit &#9998;</button>
-    </Link>
+    <Link to={`/update/${event._id} `} >
+            <button>Edit &#9998;</button>
+        </Link>
   </div>
   )
 }
