@@ -12,8 +12,11 @@ export const createAction = async ({ request }) => {
         description: formData.get("description")
     }
 
-    newEvent.dateTime = convertToUtc(newEvent.dateTime);
-
+    if(newEvent?.dateTime)
+    {
+        newEvent.dateTime = convertToUtc(newEvent.dateTime);
+    }
+    
     await fetch(URL + "/myevents", {
         method: "POST",
         headers: {
@@ -35,7 +38,10 @@ export const updateAction = async({ request, params }) =>{
       description: formData.get("description")
     }
   
-    updateEvent.dateTime = convertToUtc(updateEvent.dateTime);
+    if(updateEvent?.dateTime)
+    {
+        updateEvent.dateTime = convertToUtc(updateEvent.dateTime);
+    }
 
     await fetch(URL + "/myevents/" + params.id, {
        method: "put",
