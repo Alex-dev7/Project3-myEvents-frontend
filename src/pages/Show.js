@@ -1,5 +1,6 @@
 import { useLoaderData, Form } from "react-router-dom"
 
+
 function Show(props){
     const event = useLoaderData()
 
@@ -10,11 +11,9 @@ function Show(props){
             <h3>Date and Time: {event.dateTime}</h3>
             <h4>{event.description}</h4>
         </div>
-
         <Form action={`/delete/${event._id}`} method="POST">
             <input type="submit" value="Delete"/>
         </Form>
-
     </>)
 }
 

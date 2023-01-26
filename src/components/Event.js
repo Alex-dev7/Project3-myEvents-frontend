@@ -7,8 +7,8 @@ export function Event({event}){
  const date = new Date(event.dateTime).toLocaleString()
  
   return(
-    <div key={event._id}>
-      <div>
+    <div className="items-container" key={event._id}>
+      <div className='item'>
     <ul>
       <li><Link to={`${event._id} `} >
       {event.title}
@@ -17,10 +17,11 @@ export function Event({event}){
       <li id='fade'>{date}</li>
     </ul>
     <h3><Timer date={event.dateTime}/></h3>
-    </div>
-    <Link to={`update/${event._id} `} >
+    <Link id='edit-link' to={`update/${event._id} `} >
               <button>Edit &#9998;</button>
     </Link>
+    </div>
+
   </div>
   )
 }
