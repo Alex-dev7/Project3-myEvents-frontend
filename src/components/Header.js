@@ -11,6 +11,12 @@ function Header(props) {
                 <Link to='/create'>
                     Add New Event
                 </Link>
+                <Link to="/signup">
+                    Signup
+                </Link>
+                <Link to="/login">
+                    Login
+                </Link>
             </div>
            <Link id='title' to='/'>MyEvents</Link>
 

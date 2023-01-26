@@ -11,6 +11,7 @@ import { Update } from './pages/Update'
 import { CreateEvent } from './pages/CreateEvent'
 import About from "./pages/About";
 import Show from "./pages/Show";
+import Signup from "./pages/Signup";
 
 
 const router = createBrowserRouter(
@@ -35,6 +36,8 @@ const router = createBrowserRouter(
                     loader={eventLoader}
                     action={updateAction}/>
                 <Route path="delete/:id" action={deleteAction} />
+                <Route path="/signup" element={<Signup/>}/>
+                <Route path="/login" />
         </Route>
     )
 )
