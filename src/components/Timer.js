@@ -40,11 +40,11 @@ const Timer = ({date}) => {
       convertValues(countDown)
 
 // "end of the timer " component that will be displayed when the timer expires
-    const endTimer = <span style={{ color: "green"}}>Starts Now!</span>
+    const endTimer = <span id='expired-timer' >Starts Now!</span>
             
     return (
         <div>
-         {countDown > 0 ? <span style={{ color: "blue"}}>{days} d {hours}:{minutes}:{seconds}</span> : endTimer}
+         {countDown > 0 ? <span id='timer'>{days > 0 ? days + " d " : null} {hours}:{minutes}:{seconds}</span> : endTimer}
         </div>
     )
 }
