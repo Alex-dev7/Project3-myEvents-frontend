@@ -20,7 +20,7 @@ function Header(props) {
                         >
                             <span className="navbar-toggler-icon"></span>
                         </button>
-                        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                        <div className="collapse navbar-collapse nav-links-container" id="navbarSupportedContent">
                             <ul className="navbar-nav ms-auto text-center">
                                 <li>
                                     <Link to="/" className="nav-link">Home</Link>
@@ -32,7 +32,7 @@ function Header(props) {
                                     <Link to="/about" className="nav-link">About</Link>
                                 </li>
                                 <li>
-                                    <Link to="#" className="nav-link">Logout</Link>
+                                    <Link to="#" className="nav-link" id="nav-logout">Logout</Link>
                                 </li>
                             </ul>
                         </div>

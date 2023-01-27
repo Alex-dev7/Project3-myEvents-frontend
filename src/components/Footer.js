@@ -14,7 +14,7 @@ function Footer(props) {
             <div><p>Copyright © 2023 MyEvents</p></div>
             <div className='by-section'>
                 
-                <i>Creted By: </i>
+                <i>Created By: </i>
                 
                 <div className='name-links'>
                     <a href='https://github.com/cinduhrz' target='_blank' rel="noreferrer">Cindy Wong  </a>
