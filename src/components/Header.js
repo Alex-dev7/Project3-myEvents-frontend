@@ -17,7 +17,7 @@ function Header(props) {
     )
 
     return (
-        <header >
+        <header className="header">
             <div className='nav-bar'>
                 <Link to='/about'>
                     About

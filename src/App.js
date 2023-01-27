@@ -2,6 +2,8 @@ import React from "react"
 import { Outlet } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Dashboard from "./pages/Dashboard";
+import Home from "./pages/Home";
 
 export const GlobalCtx = React.createContext(null)
 
@@ -15,12 +17,12 @@ function App() {
     if(token) {
       setGState({...gState, token: token.token})
     }
-  }, [])
+  }, [gState])
   return (
     <GlobalCtx.Provider value={{ gState, setGState }} >
     <div className="App">
      <Header />
-     <Outlet />
+     {gState.token ? <Outlet /> : <Home/>}
      <Footer/>
     </div>
     </GlobalCtx.Provider>

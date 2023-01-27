@@ -3,7 +3,8 @@ import {
     createRoutesFromElements,
     Route
 } from "react-router-dom";
-import React from "react";
+import React, {useContext} from "react";
+import { GlobalCtx } from "./App";
 import App from "./App"
 import { createAction, updateAction, deleteAction } from "./actions";
 import { eventsLoader, eventLoader } from "./loaders"
@@ -14,19 +15,24 @@ import About from "./pages/About";
 import Show from "./pages/Show";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
-import index from "./pages/index"
-import { GlobalCtx } from "./App";
-
+import Home from "./pages/Home";
+import Dashboard from "./pages/Dashboard";
 
 const router = createBrowserRouter(
-    
     createRoutesFromElements(
-        <Route path="/" element={<App/>}>
+        <Route path="/" element={<App/>} render={() => {
+           const {gState} = useContext(GlobalCtx)
+           return  (
+            <>
+            {gState.token ? <Dashboard/> : <Home/>}
+            {gState.token && <ViewEvents />}
+            </>)
+        }
+        }>
                 <Route
                     path="" 
                     loader={eventsLoader}
-                    element={<ViewEvents/>}
-                    // render= {(rp) => gState.token ? <h1 Signup /> : <h1 Dash />} 
+                    element={<ViewEvents/>} 
                     />
                 <Route path="about" element={<About/>} />
                 <Route 

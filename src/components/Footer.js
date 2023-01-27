@@ -14,7 +14,7 @@ function Footer(props) {
             <div><p>Copyright © 2023 MyEvents</p></div>
             <div className='by-section'>
                 <FaLinkedin size={25}/>
-                <i>Created By:</i>
+                <i>Creted By:</i>
 
             </div>
         </footer>
