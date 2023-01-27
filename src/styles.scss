@@ -3,6 +3,7 @@
 
   $primary-color: #EEE7CE;
   $sec-color: #064439;
+  $show-black: rgb(77, 77, 77);
 
 * {
     margin: 0;
@@ -248,6 +249,81 @@ footer {
     background: #555;
   }
 
+  // show page styles -------------------------------------------------------------
+  .event-timer {
+    display: flex;
+    gap: .5rem;
+    font-size: 2rem;
+    font-weight: 600;
+    width: fit-content;
+    margin: 2rem auto;
+    #timer {color:rgb(61, 157, 160);}
+     #expired-timer {color: green;}
+  }
+ 
+    .event {
+        background: linear-gradient(90deg, rgba(243, 243, 243, 0) 1%, #88d0c35e 50%, #88d0c3aa 90%);
+       max-width: 80%;
+       margin: 2rem auto 1rem auto;
+       padding: 2rem;
+       line-height: 2.5rem;
+       h1 {
+        text-align: center;
+        color: rgb(67, 154, 152);
+       }
+       h3 a{
+        text-decoration: none;
+        color: $show-black;
+       }
+       h3 {
+        color:$show-black;
+       }
+
+       .description-section {
+            background-color: #064439a6;
+            padding: 1rem;
+            max-height: 230px;
+            overflow-y: scroll;
+            line-height: 2rem;
+            color: $primary-color;
+            
+       }
+    }
+
+.show-buttons {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 1rem ;
+         input[type="submit"] {
+            padding: 5px 10px;
+            font-size: inherit;
+            background-color: #e1ecf4;
+            border-radius: 3px;
+            border: 1px solid #7aa7c7;
+            color: #39739d;
+            cursor: pointer;
+            font-weight: 600;
+            &:hover {
+                background-color: #a5c8e1;
+            }
+        }
+        a button {
+            padding: 5px 10px;
+            font-size: inherit;
+            background-color: #e1ecf4;
+            border-radius: 3px;
+            border: 1px solid #7aa7c7;
+            color: #39739d;
+            cursor: pointer;
+            font-weight: 600;
+            &:hover {
+                background-color: #a5c8e1;
+            }
+        }
+}
+
+
 
   // media queries ----------------------------------------------------------------
 
@@ -303,13 +379,48 @@ footer {
 
   }
 
-//   width: 100vw;
-//   min-height: 100px;
-//   display: grid;
-//   grid-template-columns: 1fr 1fr 1fr;
-//   justify-content: center;
-//   align-items: center;
-//   background-color: #274546d6;
-//   color: $primary-color;
-//   position: absolute;
-//   bottom: 0;
+//   <!-- HTML !-->
+//   <button class="button-8" role="button">Button 8</button>
+  
+  /* CSS */
+//   .button-8 {
+//     background-color: #e1ecf4;
+//     border-radius: 3px;
+//     border: 1px solid #7aa7c7;
+//     box-shadow: rgba(255, 255, 255, .7) 0 1px 0 0 inset;
+//     box-sizing: border-box;
+//     color: #39739d;
+//     cursor: pointer;
+//     display: inline-block;
+//     font-family: -apple-system,system-ui,"Segoe UI","Liberation Sans",sans-serif;
+//     font-size: 13px;
+//     font-weight: 400;
+//     line-height: 1.15385;
+//     margin: 0;
+//     outline: none;
+//     padding: 8px .8em;
+//     position: relative;
+//     text-align: center;
+//     text-decoration: none;
+//     user-select: none;
+//     -webkit-user-select: none;
+//     touch-action: manipulation;
+//     vertical-align: baseline;
+//     white-space: nowrap;
+//   }
+  
+//   .button-8:hover,
+//   .button-8:focus {
+//     background-color: #b3d3ea;
+//     color: #2c5777;
+//   }
+  
+//   .button-8:focus {
+//     box-shadow: 0 0 0 4px rgba(0, 149, 255, .15);
+//   }
+  
+//   .button-8:active {
+//     background-color: #a0c7e4;
+//     box-shadow: none;
+//     color: #2c5777;
+//   }
