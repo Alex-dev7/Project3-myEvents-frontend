@@ -1,5 +1,4 @@
 import React from "react"
-import {GlobalCtx} from "../App"
 
 const Home = (props) => {
 
@@ -7,7 +6,7 @@ const Home = (props) => {
     return (
         <div>
             <h1>Welcome</h1>
-            <p>plase sighnup then login to view your user dashboard</p>
+            <p>Please signup and then login to view your Events</p>
         </div>
     ) 
 }

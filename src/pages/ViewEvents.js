@@ -8,9 +8,9 @@ export function ViewEvents(props){
   return (
   <>
   <div className='items-container'>
-    {events.map(event => (
+    {events ? events.map(event => (
       <Event event={event}key={event._id}/>
-    ))}
+    )) : null}
   </div>
 
     

@@ -16,24 +16,20 @@ import Show from "./pages/Show";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import Home from "./pages/Home";
-import Dashboard from "./pages/Dashboard";
+
+const HomeOrViewEvents = () => {
+    const {gState} = useContext(GlobalCtx)
+    return gState.token ?  <ViewEvents/> : <Home/>;
+}
 
 const router = createBrowserRouter(
     createRoutesFromElements(
-        <Route path="/" element={<App/>} render={() => {
-           const {gState} = useContext(GlobalCtx)
-           return  (
-            <>
-            {gState.token ? <Dashboard/> : <Home/>}
-            {gState.token && <ViewEvents />}
-            </>)
-        }
-        }>
+        <Route path="/" element={<App/>}>
                 <Route
                     path="" 
                     loader={eventsLoader}
-                    element={<ViewEvents/>} 
-                    />
+                    element={<HomeOrViewEvents/>}
+                  />
                 <Route path="about" element={<About/>} />
                 <Route 
                     path=":id"
