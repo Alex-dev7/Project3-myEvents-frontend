@@ -14,8 +14,14 @@ function Footer(props) {
             <div><p>Copyright © 2023 MyEvents</p></div>
             <div className='by-section'>
                 <FaLinkedin size={25}/>
-                <i>Creted By:</i>
-
+                <i>Created By: </i>
+                
+                <div className='name-links'>
+                    <a href='https://github.com/cinduhrz' target='_blank' rel="noreferrer">Cindy Wong  </a>
+                    <a href='https://github.com/kayfernander2022' target='_blank' rel="noreferrer">Karen Fernander</a>
+                    <a href='https://github.com/SonsOfMagnetism' target='_blank' rel="noreferrer">Rene Santiago</a>
+                    <a href='https://github.com/Alex-dev7' target='_blank' rel="noreferrer">Alexei Rusu</a>
+                </div>
             </div>
         </footer>
     )
