@@ -36,19 +36,23 @@ const Signup = (props) => {
     }
 
     return (
-        <div>
+        <div className='signup'>
+           
             <form onSubmit={handleSubmit}>
+            <h5>Sign Up</h5>
                 <input
                     type="text"
                     name="username"
                     value={form.username}
                     onChange={handleChange}
+                    placeholder="Username"
                 />
                 <input
                     type="password"
                     name="password"
                     value={form.password}
                     onChange={handleChange} 
+                    placeholder='Password'
                 />
                 <input type="submit" value="Signup" />
             </form>

@@ -37,19 +37,22 @@ const Login = (props) => {
     }
 
     return (
-        <div>
+        <div className='login'>
             <form onSubmit={handleSubmit}>
+            <h5>Log In</h5>
                 <input
                     type="text"
                     name="username"
                     value={form.username}
                     onChange={handleChange}
+                    placeholder="Username"
                 />
                 <input
                     type="password"
                     name="password"
                     value={form.password}
                     onChange={handleChange} 
+                    placeholder='Password'
                 />
                 <input type="submit" value="Login" />
             </form>
