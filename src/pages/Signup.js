@@ -3,7 +3,7 @@ import {GlobalCtx} from "../App"
 
 const Signup = (props) => {
     // useContext hook is used to access the global state and url from the App component
-    const { gState } = React.useState(GlobalCtx)
+    const { gState } = React.useContext(GlobalCtx)
     const { url } = gState
 
     // initial form state
@@ -36,7 +36,7 @@ const Signup = (props) => {
         .then(data => {
             console.log(data) // log the server response to the console
             setForm(blank) // reset the form
-            props.history.push("/login") // redirect the user to the login page
+            window.location.assign('/login') // redirect the user to the login page
         })
     }
 
