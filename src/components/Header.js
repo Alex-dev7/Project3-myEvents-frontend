@@ -7,7 +7,7 @@ function Header(props) {
     const {gState, setGState} = React.useContext(GlobalCtx)
 
     const logout = ( 
-        <Link to="/login">
+        <Link to="/login" className="nav-link" id="nav-logout">
             <span 
                 onClick={() => {
                     window.localStorage.removeItem("token")
@@ -17,24 +17,46 @@ function Header(props) {
     )
 
     return (
-        <header className="header">
-            <div className='nav-bar'>
-                <Link to='/about'>
-                    About
-                </Link>
-                <Link to='/create'>
-                    Add New Event
-                </Link>
-                <Link to="/signup">
-                    Signup
-                </Link>
-                <Link to="/login">
-                    Login
-                </Link>
-                {gState.token ? logout : null}
+
+        <header>
+            <div className="nav-container">
+                <nav className='navbar navbar-expand-lg navbar-dark'>
+                    <div className="container-fluid">
+                        <Link className="navbar-brand" to='/'>MyEvents</Link>
+                        <button
+                            className="navbar-toggler"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            // should be the id value of the content
+                            data-bs-target="#navbarSupportedContent"
+                            aria-controls="navbarSupportedContent"
+                            aria-expanded="false"
+                            aria-label="Toggle navigation"
+                        >
+                            <span className="navbar-toggler-icon"></span>
+                        </button>
+                        <div className="collapse navbar-collapse nav-links-container" id="navbarSupportedContent">
+                            <ul className="navbar-nav ms-auto text-center">
+                                <li>
+                                    <Link to="/" className="nav-link">Home</Link>
+                                </li>
+                                <li>
+                                    <Link to="/create" className="nav-link text-nowrap">Add New Event</Link>
+                                </li>
+                                <li>
+                                    <Link to="/about" className="nav-link">About</Link>
+                                </li>
+                                <li>
+                                    <Link to="/login" className="nav-link" id="nav-logout">Login</Link>
+                                    {gState.token ? logout : null}
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </nav>
 
             </div>
-           <Link id='title' to='/'>MyEvents</Link>
 
         </header>
     )
