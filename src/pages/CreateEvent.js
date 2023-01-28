@@ -16,7 +16,13 @@ export function CreateEvent(props){
     // handleChange() updates formData state with the form inputs (syncs them)
     const handleChange = (event) => {
         // update form data with change in the form
-        setFormData({...formData, [event.target.name]: event.target.value})
+        if (event.target.value ){
+             setFormData({...formData, [event.target.name]: event.target.value})
+
+        } else {
+            setFormData({...formData, [event.target.name]: null})
+        }
+       
     }
 
     // function to handle submit (mainly to clear out form inputs)
@@ -27,18 +33,21 @@ export function CreateEvent(props){
     }
 
     return (<>
-        <Form onSubmit={handleSubmit} action="/create" method="POST">
+        <Form className='create-form' onSubmit={handleSubmit} action="/create" method="POST">
             <legend><h1>Add a New Event</h1></legend>
 
-            <input type="input" name="title" placeholder="event title" value={formData.title} onChange={handleChange} required/>
+            <div className='first-row'>
+                <label for="title">Title</label>
+                <input id='title' type="input" name="title" placeholder="event title" value={formData.title} onChange={handleChange} required/>
+                <label for="url">Event Url</label>
+                <input id='url' type="input" name="url" placeholder="event url (optional)" value={formData.url}  onChange={handleChange}/>
+            </div>
+            <label for="dateTime">Date</label>
+            <input id='dateTime' type="datetime-local" name="dateTime" value={formData.dateTime} onChange={handleChange} required/>
 
-            <input type="input" name="url" placeholder="event url (optional)" value={formData.url} onChange={handleChange}/>
-
-            <input type="datetime-local" name="dateTime" value={formData.dateTime} onChange={handleChange} required/>
-
-            <textarea name="description" rows="5" placeholder="event description" value={formData.description} onChange={handleChange} required/>
-
-            <input type="submit" value="Add New Event"/>
+            <label for="description">Description:</label>
+                <textarea name="description" rows="5" id='description'  value={formData.description} onChange={handleChange} required/>
+            <input id="submitB" type="submit" value="Add New Event"/>
 
         </Form>
     </>)

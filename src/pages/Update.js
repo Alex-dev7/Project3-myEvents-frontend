@@ -11,6 +11,7 @@ export function Update(props) {
            <a href="/"><button>Back</button></a>
                  <h3>Update {event.title}</h3>
                  <Form  action={`/update/${event._id}`} method="post">
+        
                         <input type="input" name="title" defaultValue={event.title}/>
                         <input type="input" name="url" defaultValue={event.url}/>
                         <input type="datetime-local" name="dateTime" defaultValue={event.dateTime} />
