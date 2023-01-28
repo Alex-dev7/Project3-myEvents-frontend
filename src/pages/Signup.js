@@ -1,7 +1,10 @@
 import React from "react"
 import {GlobalCtx} from "../App"
+import { useNavigate } from "react-router-dom"
 
 const Signup = (props) => {
+    // useNavigate hook is used to navigate to different pages in your app
+    const navigate = useNavigate()
     // useContext hook is used to access the global state and url from the App component
     const { gState } = React.useContext(GlobalCtx)
     const { url } = gState
@@ -36,7 +39,7 @@ const Signup = (props) => {
         .then(data => {
             console.log(data) // log the server response to the console
             setForm(blank) // reset the form
-            props.history.push("/login") // redirect the user to the login page
+            navigate("/login") // redirect the user to the login page
         })
     }
 
