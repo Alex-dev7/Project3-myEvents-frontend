@@ -7,7 +7,7 @@ function Header(props) {
     const {gState, setGState} = React.useContext(GlobalCtx)
 
     const logout = ( 
-        <Link to="/login" className="nav-link" id="nav-logout">
+        <Link to="/login" className="nav-link">
             <span 
                 onClick={() => {
                     window.localStorage.removeItem("token")
@@ -46,8 +46,11 @@ function Header(props) {
                                 <li>
                                     <Link to="/about" className="nav-link">About</Link>
                                 </li>
+                                    <Link to="/signup" className="nav-link">Signup</Link>
                                 <li>
                                     <Link to="/login" className="nav-link" id="nav-logout">Login</Link>
+                                </li>
+                                <li>
                                     {gState.token ? logout : null}
                                 </li>
                             </ul>
