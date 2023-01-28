@@ -42,7 +42,13 @@ function Header(props) {
                             <span className="navbar-toggler-icon"></span>
                         </button>
                         <div className="collapse navbar-collapse nav-links-container" id="navbarSupportedContent">
-                            <ul className="navbar-nav ms-auto text-center">
+                            <ul className="navbar-nav ms-auto text-center"
+                                  //function to close the navigation dropdown when a link is clicked
+                               onClick={() => {
+                               const menu = document.querySelector('.navbar-collapse');
+                               if (menu.classList.contains('show')) {
+                                menu.classList.remove('show');
+                                  } } }>
                                 <li>
                                     <Link to="/" className="nav-link">Home</Link>
                                 </li>

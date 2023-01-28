@@ -1,5 +1,4 @@
 import { GoMarkGithub } from 'react-icons/go';
-import { FaLinkedin} from 'react-icons/fa'
 
 function Footer(props) {
 
@@ -13,8 +12,6 @@ function Footer(props) {
             </div>
             <div><p>Copyright © 2023 MyEvents</p></div>
             <div className='by-section'>
-
-                <FaLinkedin size={25}/>
 
                 <i>Created By: </i>
                 

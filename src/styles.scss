@@ -472,6 +472,47 @@ footer {
     }
 }
 
+.home {
+    text-align: center;
+    margin: 5rem auto;
+}
+
+.signup, .login {
+    background-color: #7ac7c776;
+    width: 300px;
+    height: 300px;
+    margin: 5rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        border: 1px solid black;
+        width: 90%;
+        height: 90%;
+
+    button, input[type="submit"]  {
+        max-width: fit-content;
+        padding: 5px 10px;
+        font-size: inherit;
+        background-color: #e1ecf4;
+        border-radius: 3px;
+        border: 1px solid #7aa7c7;
+        color: #39739d;
+        cursor: pointer;
+        font-weight: 600;
+        &:hover {
+            background-color: #a5c8e1;
+        }
+     }
+    }
+}
+
   // media queries ----------------------------------------------------------------
 
 
