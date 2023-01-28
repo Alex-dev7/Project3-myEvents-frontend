@@ -16,7 +16,6 @@
 }
 .root {
     height: 100vh;
-
     position: relative;
 }
 body {
@@ -30,12 +29,8 @@ body {
 // header styles ------------------------------------------------
 
 header {
-    // background-color: #006868;
     background-color: $sec-color;
-    // min-height: 18vh;
-   
     width: 100vw;
-    // color: #FFFCF6;
     color: $primary-color;
 
     .container-fluid {
@@ -49,7 +44,6 @@ header {
         font-weight: 600;
         text-decoration: none;
         color: inherit;
-        // margin-left: 1rem;
         color: $primary-color;
 
         &:hover{
@@ -136,13 +130,22 @@ footer {
 
 // home page styles ----------------------------------------------------------------
 
+
+
 .items-container {
     width: 90vw;
     max-height: 60vh;
     overflow-y: scroll;
     overflow-x: hidden;
-    // border:1px solid black;
     margin: 2rem auto;
+
+    .count {
+    position: fixed;
+    color: #6f6f6fb9;
+    width: fit-content;
+    padding: 1px 5px 1px 15px;
+    margin: 5px 
+    }
 
 
  ::-webkit-scrollbar {
@@ -232,21 +235,16 @@ footer {
  }
 
 
- /* width */
 ::-webkit-scrollbar {
     width: 5px;    
   }
-  /* Track */
   ::-webkit-scrollbar-track {
     background: transparent;
   }
-  /* Handle */
   ::-webkit-scrollbar-thumb {
     background: #888;
     border-radius: 5px;
   }
-  
-  /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
     background: #555;
   }
@@ -352,7 +350,6 @@ footer {
         }
     }
     input {
-        // max-width: fit-content;
         border: 1px solid white;
         padding: 5px 10px;
         background-color: inherit;
@@ -398,7 +395,6 @@ footer {
         gap: 1rem;
         border-radius: 15px;
         input {
-            // max-width: fit-content;
             border: 1px solid white;
             padding: 5px 10px;
             background-color: inherit;
@@ -480,16 +476,26 @@ footer {
 
 
 
-  @media (max-width: 992px) {
+  @media (max-width: 810px) {
+    body {
+        max-width: 100vw;
+    }
+        .count {
+            transform:translateY(-30px);
+        }
+
     .items-container {
-        width: 100vw;
+        width: 99vw;
         font-size: .8rem;
         gap: .1rem;
+
+
         a {
             font-size: inherit;
         }
         .item {
-            
+            width: 98%;
+            margin: 0 auto;
            ul {
            max-width: 70%;
            li a{
@@ -509,21 +515,15 @@ footer {
             display: none;
         }
     }
-    .header {
-        display: flex;
-        flex-direction: column;
-        align-content: center;
-        .nav-bar a{
-            font-size: 1.2rem;
-        }
 
     header {
         .container-fluid {
-            margin: 0 0 1rem 0;
+
+            margin: 0 0 .1rem 0;
             text-align: center;
 
             .navbar-brand {
-                margin: auto;
+                margin: 0 auto;
             }
         }
 
@@ -561,7 +561,8 @@ footer {
     margin: 0px auto 2px auto;
     padding: 0px auto;
      max-width: 100%;
-     min-height: 55vh;
+     min-height: 52vh;
+     m
     h1, h3 {
         font-size: 1rem;
     }
@@ -612,4 +613,4 @@ footer {
    }
 
   }
-  }  
+  
