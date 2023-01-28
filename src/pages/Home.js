@@ -4,7 +4,7 @@ const Home = (props) => {
 
 
     return (
-        <div>
+        <div className='home'>
             <h1>Welcome</h1>
             <p>Please signup and then login to view your Events</p>
         </div>
