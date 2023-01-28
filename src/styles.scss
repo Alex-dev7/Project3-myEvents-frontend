@@ -2,8 +2,11 @@
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;600&display=swap');
 
   $primary-color: #EEE7CE;
+  $primary-hover-color: #bbbbbb;
   $sec-color: #064439;
   $show-black: rgb(77, 77, 77);
+
+
 
 * {
     margin: 0;
@@ -16,54 +19,55 @@
 
     position: relative;
 }
-
-body, html {
-    background-color: $primary-color;
-    // overflow: hidden;
+body {
+    // this is the built in Bootstrap variable to adjust the body's bg color
+    // doesn't work with SASS variables for some reason, so I used hex code
+    --bs-body-bg: #EEE7CE;
     // background-color: #FFF0EB;
 }
 
 
 // header styles ------------------------------------------------
-.header {
+
+header {
     // background-color: #006868;
     background-color: $sec-color;
-    min-height: 18vh;
+    // min-height: 18vh;
    
     width: 100vw;
     // color: #FFFCF6;
-    color: #EEE7CE;
-    margin-bottom: 1rem;
+    color: $primary-color;
 
-    #title {
+    .container-fluid {
+        margin: 0 3rem;
+    }
+
+
+    .navbar-brand {
         width: 100%;
         font-size: 4rem;
         font-weight: 600;
         text-decoration: none;
         color: inherit;
-        margin-left: 1rem;
-    }
-    #title:hover {
-        text-shadow: #57989afc 2px 2px 3px;
+        // margin-left: 1rem;
+        color: $primary-color;
+
+        &:hover{
+            color: $primary-color;
+            text-shadow: #57989afc 2px 2px 3px;
+        }
     }
 
-    .nav-bar {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        background-color: #27454688;
-        border-bottom: .1px solid black;
-        a {
-            width: auto;
-            font-size: 1.4rem;
-            padding: 10px;
-            text-decoration: none;
-            color: inherit;
+    .navbar {
+       .nav-link {
+            color: $primary-color;
+            font-size: 1.2rem;
+            margin: 1.5rem;
+            
+            &:hover {
+                color: $primary-hover-color;
+            }
         }
-        a:hover{
-            background-color: #3f71736f;
-        }
-
     }
 
 }
@@ -474,8 +478,9 @@ footer {
 
   // media queries ----------------------------------------------------------------
 
-  @media (max-width: 810px) {
 
+
+  @media (max-width: 992px) {
     .items-container {
         width: 100vw;
         font-size: .8rem;
@@ -511,20 +516,33 @@ footer {
         .nav-bar a{
             font-size: 1.2rem;
         }
-    
 
-    #title {
-        font-size: 2rem;
-        width: auto;
-        margin: auto;
-      }
+    header {
+        .container-fluid {
+            margin: 0 0 1rem 0;
+            text-align: center;
+
+            .navbar-brand {
+                margin: auto;
+            }
+        }
+
+        #title {
+            font-size: 1rem;
+        }
+
+        .navbar-toggler {
+            margin: auto;
+        }
    }
 
    footer {
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     position: absolute;
     font-size: .8rem;
+
     bottom: 0;
     div {
         margin-top: .2rem;
@@ -587,5 +605,11 @@ footer {
         }
 
    }
+
+        div {
+            margin-top: .2rem;
+        }
+   }
+
   }
-  }
+  }  
