@@ -7,9 +7,14 @@ export function ViewEvents(props){
 
   return (
   <>
-    {events.map(event => (
+ 
+  <div className='items-container'>
+    <p className='count'>| {events.length} events |</p>
+    {events ? events.map(event => (
       <Event event={event}key={event._id}/>
-    ))}
+    )) : null}
+  </div>
+
     
   </>)
 }
