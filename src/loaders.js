@@ -1,5 +1,5 @@
 // this URL is the dev branch
-const URL = "https://myevents-backend-dev.onrender.com"
+const URL = "https://myevents-backend.onrender.com"
 
 
 // loader for index route
