@@ -7,16 +7,22 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 export const GlobalCtx = React.createContext(null)
 
 function App() {
-  const [gState, setGState] = React.useState({ url:"https://myevents-backend-dev.onrender.com", token: null})
+  const [token, setToken] = React.useState(null)
+  const [gState, setGState] = React.useState({ url:"https://myevents-backend-dev.onrender.com", token: token})
 
   // Seeing if already logged in
   React.useEffect(() => {
     const token = JSON.parse(window.localStorage.getItem("token"))
     console.log(token)
     if(token) {
-      setGState({...gState, token: token.token})
+      setToken(token.token)
     }
-  }, [gState])
+  }, [])
+
+  React.useEffect(() => {
+    setGState(gState => ({...gState, token: token}));
+  }, [token]);
+
   return (
     <GlobalCtx.Provider value={{ gState, setGState }} >
     <div className="App">
