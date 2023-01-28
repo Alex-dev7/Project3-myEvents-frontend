@@ -2,19 +2,25 @@ import { Link } from 'react-router-dom'
 import React from 'react'
 import { GlobalCtx } from '../App'
 
+// The Header component is a functional component that renders the navigation bar for the application.
+// It uses the Link component from react-router-dom to navigate between different pages of the app.
 function Header(props) {
 
+    // Use the GlobalCtx to access the global state and the setGState function to update it.
     const {gState, setGState} = React.useContext(GlobalCtx)
 
+    // create logout component
     const logout = ( 
         <Link to="/login" className="nav-link">
             <span 
+                // remove token from localstorage and set token to null to logout user
                 onClick={() => {
                     window.localStorage.removeItem("token")
                     setGState({...gState, token: null})
             }}>Logout </span>
         </Link>
     )
+
 
     return (
 
