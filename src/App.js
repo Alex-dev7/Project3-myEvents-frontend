@@ -2,8 +2,6 @@ import React from "react"
 import { Outlet } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import { ViewEvents } from "./pages/ViewEvents";
-import Home from "./pages/Home";
 
 export const GlobalCtx = React.createContext(null)
 

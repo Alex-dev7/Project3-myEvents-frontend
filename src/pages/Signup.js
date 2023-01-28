@@ -2,7 +2,7 @@ import React from "react"
 import {GlobalCtx} from "../App"
 
 const Signup = (props) => {
-    const { gState, setGState } = React.useContext(GlobalCtx)
+    const { gState } = React.useContext(GlobalCtx)
     const { url } = gState
 
     const blank = {
