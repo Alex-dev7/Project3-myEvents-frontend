@@ -36,7 +36,7 @@ const Signup = (props) => {
         .then(data => {
             console.log(data) // log the server response to the console
             setForm(blank) // reset the form
-            props.history.push("/login") // redirect the user to the login page
+            window.location.assign('/login') // redirect the user to the login page
         })
     }
 
