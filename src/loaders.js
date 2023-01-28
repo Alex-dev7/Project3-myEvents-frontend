@@ -9,6 +9,7 @@ export const eventsLoader = async () => {
 
     for(let ev of events)
     {
+        ev.dateTime = convertFromUTC(ev.dateTime);
         if(ev?.dateTime)
         {
             ev.dateTime = convertFromUTC(ev.dateTime);
@@ -23,12 +24,11 @@ export const eventLoader = async ({params}) => {
     const response = await fetch(URL + "/myevents/" + params.id)
     
     const event = await response.json()
-
+    event.dateTime = convertFromUTC(event.dateTime);
     if(event?.dateTime)
     {
         event.dateTime = convertFromUTC(event.dateTime);
     }
-
     return event
 }
 

@@ -1,8 +1,23 @@
 import { Link } from 'react-router-dom'
+import React from 'react'
+import { GlobalCtx } from '../App'
 
 function Header(props) {
 
+    const {gState, setGState} = React.useContext(GlobalCtx)
+
+    const logout = ( 
+        <Link to="/login" className="nav-link" id="nav-logout">
+            <span 
+                onClick={() => {
+                    window.localStorage.removeItem("token")
+                    setGState({...gState, token: null})
+            }}>Logout </span>
+        </Link>
+    )
+
     return (
+
         <header>
             <div className="nav-container">
                 <nav className='navbar navbar-expand-lg navbar-dark'>
@@ -32,13 +47,15 @@ function Header(props) {
                                     <Link to="/about" className="nav-link">About</Link>
                                 </li>
                                 <li>
-                                    <Link to="#" className="nav-link" id="nav-logout">Logout</Link>
+                                    <Link to="/login" className="nav-link" id="nav-logout">Login</Link>
+                                    {gState.token ? logout : null}
                                 </li>
                             </ul>
                         </div>
 
                     </div>
                 </nav>
+
             </div>
 
         </header>
