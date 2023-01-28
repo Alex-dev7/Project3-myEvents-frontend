@@ -10,7 +10,7 @@ export const GlobalCtx = React.createContext(null)
 function App() {
   // Initialize state for token and global state
   const [token, setToken] = React.useState(null)
-  const [gState, setGState] = React.useState({ url:"https://myevents-backend.onrender.com", token: token})
+  const [gState, setGState] = React.useState({ url:"https://myevents-backend-dev.onrender.com", token: token})
 
   // Check if user is already logged in on page load
   React.useEffect(() => {
