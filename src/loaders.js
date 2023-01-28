@@ -1,4 +1,4 @@
-// this URL is the dev branch
+// this URL is the main branch
 const URL = "https://myevents-backend.onrender.com"
 
 
